@@ -13,10 +13,10 @@ if choice == 'investment':
     interest = input("Do you want simple or compound interest? ").lower()
     interest_rate = interest_rate/100
     if interest == "simple":
-        Total_amount = deposit_amount * (1 + interest_rate*years)
+        Total_amount = round(deposit_amount * (1 + interest_rate*years))
         print((f"Total amount after interest: {Total_amount}"))
     elif interest == "compound":
-        Total_amount = deposit_amount * math.pow((1+interest_rate),years)
+        Total_amount = round(deposit_amount * math.pow((1+interest_rate),years))
         print(f"Total amount after interest: {Total_amount}")
 # If the user chooses bond then they will be presented with 3 questions.
 # The answers provided will be used to calculate the repayment per month based on the bond repayment formula
@@ -26,7 +26,7 @@ elif choice == "bond":
    months =  int(input("Please enter the number of months you plan to take to repay the bond "))
    
    monthly_interest_rate = monthly_interest_rate/100/12
-   repayment = (monthly_interest_rate * deposit_amount)/(1 - (1 + monthly_interest_rate) **(-months))
+   repayment = round((monthly_interest_rate * deposit_amount)/(1 - (1 + monthly_interest_rate) **(-months)))
    print(f"you will have to pay £{repayment} per month")
 #else:
  #   print("Error. Please enter an option from the menu.")
