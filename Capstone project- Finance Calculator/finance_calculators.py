@@ -29,8 +29,8 @@ elif choice == "bond":
    monthly_interest_rate = monthly_interest_rate/100/12
    repayment = round((monthly_interest_rate * deposit_amount)/(1 - (1 + monthly_interest_rate) **(-months)))
    print(f"you will have to pay £{repayment} per month")
-#else:
- #   print("Error. Please enter an option from the menu.")
+else:
+   print("Error. Please enter an option from the menu.")
         
 
     
