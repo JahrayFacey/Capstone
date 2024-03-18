@@ -5,6 +5,7 @@ print("investment - to calculate the amount of interest you'll earn on your inve
 print("bond       - to calculate the amount you'll have to pay on a home loan")
 choice = input("\nEnter either 'investment' or 'bond' from the menu above to proceed: ").lower()
 # If the user chooses investment they will be prompted with 4 questions.
+# Used the round function to make outputs more readable.
 # The answers provided will be used to calculate either simple or compund interest based on their respective formulas.
 if choice == 'investment':
     deposit_amount = int(input("How much money are you depositing? "))
